@@ -51,7 +51,7 @@ A high-performance RESTful API scaffold based on Go Fiber framework
 ```bash
 Clone repository
 
-git clone https://github.com/yourname/FastFiber.git cd FastFiber
+git clone https://github.com/unclesam-LY/FastFiber.git cd FastFiber
 Install dependencies
 go mod tidy
 ```
