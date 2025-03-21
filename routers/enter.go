@@ -19,7 +19,7 @@ func Run() {
 			// 输出到 zap 日志
 		}),
 	)
-	// 静态文件路由（保持与 Gin 相同配置）
+	// 静态文件路由
 	r.Static("/uploads", "./uploads")
 	g := r.Group("api")
 	UserRouter(g)
