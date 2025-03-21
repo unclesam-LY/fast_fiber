@@ -81,7 +81,8 @@ go run main.go -db
 go run main.go -m user -t list
 
 #### 启动服务（开发模式）/ start service (development mode)
-air
+1. air init
+2. air
 
 #### 生产环境构建 / production build
 go build -ldflags "-s -w" -o app
