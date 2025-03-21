@@ -3,3 +3,4 @@ testdata/
 settings.yaml
 logs
 .idea
+tmp

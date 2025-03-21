@@ -35,8 +35,8 @@ func InitGorm() (db *gorm.DB) {
 
 	// 设置连接池
 	sqlDB.SetMaxIdleConns(10)
-	sqlDB.SetMaxOpenConns(100)
-	sqlDB.SetConnMaxLifetime(time.Hour)
+	sqlDB.SetMaxOpenConns(50)
+	sqlDB.SetConnMaxLifetime(1 * time.Minute)
 
 	zap.L().Info("数据库连接成功")
 	return
