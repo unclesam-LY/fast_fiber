@@ -2,3 +2,4 @@ testdata/
 .air.toml
 settings.yaml
 logs
+.idea
