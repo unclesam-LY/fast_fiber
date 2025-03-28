@@ -3,9 +3,9 @@ package user_api
 import (
 	"FastFiber/global"
 	"FastFiber/models"
-	"FastFiber/models/res"
 	"FastFiber/service/common"
 	"FastFiber/utils/desens"
+	"FastFiber/utils/res"
 	"github.com/gofiber/fiber/v2"
 	"go.uber.org/zap"
 )
@@ -22,6 +22,7 @@ func (UserApi) UserListView(c *fiber.Ctx) error {
 	var users []models.UserModel
 	list, count, _ := common.ComList(models.UserModel{}, common.Option{
 		PageInfo: page,
+		Debug:    true,
 	})
 
 	for _, user := range list {

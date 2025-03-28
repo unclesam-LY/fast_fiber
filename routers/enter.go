@@ -15,13 +15,13 @@ func Run() {
 	r.Use(
 		recover.New(), // 错误恢复
 		logger.New(logger.Config{ // 访问日志
-			Format: "[${time}] ${status} - ${method} ${path}\n",
-			// 输出到 zap 日志
+			Format: "[${time}] | ${status} | ${latency} | ${ip} | ${method} | ${path} | ${error}\n",
 		}),
 	)
 	// 静态文件路由
 	r.Static("/uploads", "./uploads")
 	g := r.Group("api")
+
 	UserRouter(g)
 	// 获取监听地址
 	addr := global.Config.System.Addr()
