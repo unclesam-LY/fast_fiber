@@ -49,7 +49,7 @@ func OKWithMessage(msg string, c *fiber.Ctx) error {
 	return Result(Success, map[string]any{}, msg, c)
 }
 
-func OkWith(c *fiber.Ctx) error {
+func OkWithCode(c *fiber.Ctx) error {
 	return Result(Success, map[string]any{}, "成功", c)
 }
 
